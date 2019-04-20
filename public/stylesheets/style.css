@@ -1,0 +1,244 @@
+.header {
+  padding: 0.5px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Customized Navigation Bar */
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(78, 136, 170);
+  color: white;
+}
+
+/* Customized Button*/
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+}
+
+.button:hover {
+  background-color: rgb(128, 0, 53);
+}
+
+.btn {
+  background-color: #4caf50;
+  border-block-end-color: lightcyan;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.btn:hover {
+  background-color: rgb(128, 0, 53);
+}
+
+.btn_ {
+  background-color: #4caf50;
+  border-block-end-color: lightcyan;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 10%;
+}
+
+.btn_:hover {
+  background-color: rgb(128, 0, 53);
+}
+
+/* Customized Headings */
+h1 {
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(231, 231, 231);
+  font-size: 32px;
+}
+
+h2 {
+  font-weight: bold;
+  color: rgb(37, 194, 23);
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: bold;
+  color: rgb(233, 37, 112);
+  font-size: 24px;
+}
+
+/* Customized Input */
+
+input {
+  width: 40%;
+  height: 5%;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+/* This field will style all element with required attribute*/
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.box {
+  background-color: lightgrey;
+  width: 200px;
+  border: 10px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* POP UP*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tool Tip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*-----------------*/
+
+.float-left-area {
+  width: 70%;
+  float: left;
+}
+
+.float-right-area {
+  width: 30%;
+  float: left;
+}
+
+/* rotate class*/
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+/* used to cerate animation to the class rotate */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

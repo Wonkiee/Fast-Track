@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <title>M P S</title>
+
+  <head>
+    <!-- Inlcude CSS files -->
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+
+    <!-- Inlcude JavaScript files -->
+    <script type="text/javascript" src="../javascripts/dataHandle.js"></script>
+    <script
+      type="text/javascript"
+      src="../javascripts/homePageHandle.js"
+    ></script>
+  </head>
+
+  <!-- Display the header -->
+  <div class="header">
+    <h1>Mobile Phone Shop</h1>
+    <img src="../images/syscoLABS.png" class="rotate"/>
+  </div>
+
+  <div id="getUseId"></div>
+
+  <script>
+    displayNavBar();
+    displayPhoneDetails();
+  </script>
+
+  <ul>
+    <li><a href="">Home</a></li>
+    <li>
+      <a href="" id="heading_1"></a>
+    </li>
+    <li>
+      <a href="" id="heading_2"></a>
+    </li>
+    <li>
+      <a href="" id="heading_3"></a>
+    </li>
+    <li>
+      <a href="" id="heading_4"></a>
+    </li>
+    <li>
+      <a href="" id="heading_5"></a>
+    </li>
+    <li>
+      <a href="" id="heading_6"></a>
+    </li>
+    <li>
+      <a href="" id="heading_7"></a>
+    </li>
+    <li>
+      <a href="" id="heading_8"></a>
+    </li>
+    <li>
+      <a href="" id="heading_9"></a>
+    </li>
+    <li>
+      <a href="" id="heading_10"></a>
+    </li>
+    <li style="float:right"><a class="active" href="#about">About</a></li>
+  </ul>
+
+  <div style="width:100%">
+    <div style="background-color:#b5dcb3; width:100%;">
+      <h1>Mobile Phones Available</h1>
+    </div>
+
+    <div
+      style="background-color:#aaa; height:300px; width:200px; position: sticky; float:right;"
+    >
+      <div>
+        <b>Most Popolar Phones</b>
+        <p />
+        <div id="mostPopularPhones"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+                <img id = 'itm_1'  alt="Forest" width="300" height="300">
+              </a>
+          <div class="desc" id="item_1" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="1" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+      
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_2'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_2" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="2" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_3'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_3" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="3" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_4'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_4" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="4" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_5'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_5" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="5" onmouseover="hoverTextDisplay(id)">
+          Move Here Fro More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_6'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_6" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="6" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_7'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_7" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="7" onmouseover="hoverTextDisplay(id)">
+          Move Here Fro More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_8'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_8" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="8" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_9'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_9" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="9" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+      <div class="tooltip">
+        <div class="gallery">
+            <a target="_blank" href="../images/1.png">
+              <img id = 'itm_10'  alt="Forest" width="300" height="300">
+            </a>
+          <div class="desc" id="item_10" onclick="clickCount(id)"></div>
+        </div>
+        <span class="tooltiptext" id="10" onmouseover="hoverTextDisplay(id)">
+          Move Here For More!
+        </span>
+      </div>
+    </div>
+
+    <div class="clear-floated"></div>
+    <div style="background-color:#b5dcb3; clear:both">
+      <center>
+        Copyright © SyscoLABS
+      </center>
+    </div>
+  </div>
+</html>
