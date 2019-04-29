@@ -1,6 +1,5 @@
 var model = require("../models/model");
 
-//module.exports.retrieveBrandsController = model.retrieveBrandsModel;
 module.exports.retrieveBrandsController = function(req, res) {
   model.retrieveBrandsModel(function(brandNames) {
     if (brandNames == []) {

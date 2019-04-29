@@ -1,13 +1,13 @@
 let connection = require("./connectionSetup");
 
-module.exports.retrieveBrands = function retrieveBrands(func) {
+module.exports.retrieveBrands = function retrieveBrands(callback) {
   let rowData;
   connection.query("SELECT brand_name FROM Brands", function(err, rows) {
     if (err) {
-      func([]);
+      callback([]);
       return;
     }
-    func(rows);
+    callback(rows);
   });
 
   return rowData;

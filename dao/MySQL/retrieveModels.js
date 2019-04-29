@@ -1,15 +1,14 @@
 let connection = require("./connectionSetup");
 
-module.exports.retrieveModels = function(func) {
+module.exports.retrieveModels = function(callback) {
   connection.query("SELECT id, brand,model,price FROM PhoneModels", function(
     err,
-    rows,
-    fields
+    rows
   ) {
     if (err) {
-      func([]);
+      callback([]);
       return;
     }
-    func(rows);
+    callback(rows);
   });
 };

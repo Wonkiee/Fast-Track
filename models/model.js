@@ -39,9 +39,10 @@ module.exports.retrieveModelsModel = function(sendPhoneModels) {
   });
 };
 
-module.exports.addClickCountModel = function(req, sendStatus) {
-  addClickCountDAO.addClickCount(req.body.id);
-  sendStatus(200);
+module.exports.addClickCountModel = function(req, callback) {
+  let success = addClickCountDAO.addClickCount(req.body.id);
+  if (success) callback(200);
+  else callback(404);
   return;
 };
 
@@ -58,31 +59,23 @@ module.exports.getClickCountModel = function(sendClickCount) {
         });
       }
     })
-    .then(function() {});
+    .catch(error => {
+      sendClickCount([]);
+    });
 };
 
 function fillValue(i, val, keys, sendClickCount) {
   storeData[i] = val;
 
   if (i == keys.length - 1) {
-    storeData = storeData.map(Number);
-    let maxClickCount_id = storeData.indexOf(Math.max.apply(null, storeData)); // get the max of the array
-    let secondMaxClickCount_id = maxClicks();
-    if (secondMaxClickCount_id > maxClickCount_id) secondMaxClickCount_id++;
-    let thirdMaxClickCount_id = maxClicks();
-    if (thirdMaxClickCount_id > maxClickCount_id) thirdMaxClickCount_id++;
-    if (thirdMaxClickCount_id > secondMaxClickCount_id) thirdMaxClickCount_id++;
-    let arrOfId = [
-      keys[maxClickCount_id],
-      keys[secondMaxClickCount_id],
-      keys[thirdMaxClickCount_id]
-    ];
+    storeData = storeData.map(Number); //convert the String array into an array on Integers
+    let arrOfId = [],
+      maxOfArray_id;
+    for (let i = 0; i < 3; i++) {
+      maxOfArray_id = storeData.indexOf(Math.max.apply(null, storeData));
+      arrOfId[i] = maxOfArray_id;
+      storeData[maxOfArray_id] = -1;
+    }
     sendClickCount(arrOfId);
   }
-}
-
-function maxClicks() {
-  var max = Number(Math.max.apply(null, storeData)); // get the max of the array
-  storeData.splice(storeData.indexOf(max), 1); // remove max from the array
-  return storeData.indexOf(Math.max.apply(null, storeData)); // get the 2nd max
 }

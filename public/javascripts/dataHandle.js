@@ -8,14 +8,14 @@
 let phoneBrands = []; //array
 let phoneDetails = {}; //dictionary
 let phoneModel = {};
-let URL = "http://localhost:3000/";
+PORT = 3000;
+let URL = "http://localhost:" + PORT + "/";
 class DataHandle {
   constructor() {
     //insertBrandsToList();
   }
 
   //function to retrieve the brands to the list from database
-  //async insertBrandsToList(){
 
   insertBrandsToList = () => {
     let promise = new Promise((resolve, reject) => {
@@ -50,13 +50,11 @@ class DataHandle {
   };
 
   //returns the number of brands available
-  //returnArrayLenth(){
   returnArrayLenth = () => {
     return phoneBrands.length;
   };
 
   //Get phone Models to the list from database
-
   retrievePhoneDetails = () => {
     return new Promise((resolve, reject) => {
       fetch(URL + "retrievemodels", {
@@ -72,19 +70,13 @@ class DataHandle {
           return response.json();
         })
         .then(res => {
-          console.log("res", res);
           phoneDetails = res;
-          // for (let i = 0; i < res.length; i++) {
-          //   phoneDetails[i] = res[i];
-          // }
           return resolve(phoneDetails);
         })
         .catch(function(error) {
           alert("Server error!");
           return reject(error);
         });
-
-      //if (this.returnArrayLenth == 0) return "Empty";
     });
   };
 
@@ -106,7 +98,6 @@ class DataHandle {
       .then(res => {})
       .catch(function(error) {
         alert("Server Error");
-        console.log(error);
       });
   };
 
@@ -128,7 +119,6 @@ class DataHandle {
       })
       .catch(function(error) {
         alert("Server Error");
-        console.log(error);
       });
   };
 }

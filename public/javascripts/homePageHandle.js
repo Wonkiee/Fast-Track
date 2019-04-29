@@ -90,3 +90,26 @@ let setImgSrc = () => {
     //image.src = "../images/default.png";
   }
 };
+
+///////////////////////////////////// React //////////////////////////////////////////
+let displayNavBar_ = () => {
+  dataHandle.insertBrandsToList().then(data => {
+    let brandsArr = [];
+    for (let i = 0; i < 10; i++) {
+      brandsArr[i] = data[i].slice(1, -1);
+    }
+    console.log(brandsArr);
+    return brandsArr;
+  });
+};
+
+//function displayPhoneDetails() {
+let displayPhoneDetails_ = () => {
+  dataHandle.retrievePhoneDetails().then(data => {
+    let modelDetailsArr = [];
+    for (let i = 0; i < 10; i++) {
+      modelDetailsArr[i] = data[i][1] + " " + data[i][2];
+    }
+    console.log(modelDetailsArr);
+  });
+};
